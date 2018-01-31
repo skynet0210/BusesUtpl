@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar color="primary">
+
+    <ion-buttons>
+      <button ion-button
+              (click)="salir()">
+        Salir
+      </button>
+    </ion-buttons>
+
+    <ion-title>
+      {{ usuario.ruta1 }}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+
+
+  <sebm-google-map [latitude]= "usuario.lat" [longitude]="usuario.lng" [zoom]="17">
+    <sebm-google-map-marker
+            [latitude]="usuario.lat"
+            [longitude]="usuario.lng"
+            iconUrl="assets/img/taxi.png">
+    </sebm-google-map-marker>
+  </sebm-google-map>
+
+
+</ion-content>
+
+<script type="text/javascript">
+  var lat = lat: {{ usuario.lat }};
+  var lng = lng: {{ usuario.long }};
+</script>
